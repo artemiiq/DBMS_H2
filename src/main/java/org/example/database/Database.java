@@ -5,21 +5,17 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-    private static final String URl = "jdbc:h2:~/test";
-    private static final String USER = "sa";
-    private static final String PASSWORD = "";
     private static Database instance;
     private Connection connection;
 
-    private Database() {
-        try {
-            connection = DriverManager.getConnection(URl, USER, PASSWORD);
-        } catch (SQLException e) {
-            throw new RuntimeException("Failed to connect to the database", e);
-        }
+    private Database() throws SQLException {
+        String url = "jdbc:h2:~/test";
+        String user = "sa";
+        String password = "";
+        this.connection = DriverManager.getConnection(url, user, password);
     }
 
-    public static synchronized Database getInstance() {
+    public static Database getInstance() throws SQLException {
         if (instance == null) {
             instance = new Database();
         }

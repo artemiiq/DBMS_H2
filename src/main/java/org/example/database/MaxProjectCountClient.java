@@ -19,6 +19,6 @@ public class MaxProjectCountClient {
 
     @Override
     public String toString() {
-        return "MaxProjectCountClient{name='" + name + "', projectCount=" + projectCount + '}';
+        return "MaxProjectCountClient{name='" + name + "', projectCount=" + projectCount + "}";
     }
 }

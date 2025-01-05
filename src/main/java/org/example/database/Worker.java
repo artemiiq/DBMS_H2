@@ -1,10 +1,10 @@
 package org.example.database;
 
-public class MaxSalaryWorker {
+public class Worker {
     private String name;
     private int salary;
 
-    public MaxSalaryWorker(String name, int salary) {
+    public Worker(String name, int salary) {
         this.name = name;
         this.salary = salary;
     }
@@ -19,6 +19,6 @@ public class MaxSalaryWorker {
 
     @Override
     public String toString() {
-        return "MaxSalaryWorker{name='" + name + "', salary=" + salary + '}';
+        return "Worker{name='" + name + "', salary=" + salary + "}";
     }
 }
